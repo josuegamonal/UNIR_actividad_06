@@ -10,7 +10,7 @@ export class UsersService {
 	httpClient = inject(HttpClient)
 	baseUrl ='https://peticiones.online/api/users'
 
-	getAllPromises() : Promise<IUsers>{
+	getAllUsers() : Promise<IUsers>{
 		return lastValueFrom(this.httpClient.get<IUsers>(this.baseUrl))
 
 	}

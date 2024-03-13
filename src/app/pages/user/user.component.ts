@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { UsersService } from '../../services/users.service';
-import { IUser } from '../../interfaces/iuser.interface';
+import { IUsers } from '../../interfaces/iusers.interface';
 
 @Component({
   selector: 'app-user',
@@ -11,6 +11,9 @@ import { IUser } from '../../interfaces/iuser.interface';
 })
 export class UserComponent {
 	usersService = inject(UsersService)
-	arrUsers : IUser[] = []
+	arrUsers : IUsers[] = []
+
+	ngOnInit(){
+	}
 
 }

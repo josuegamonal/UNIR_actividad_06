@@ -17,7 +17,7 @@ export class HomeComponent {
 	page: number = 1;
 
 	async ngOnInit(){
-		this.usersService.getAllUsers(this.page).then((data : IUsers) => {
+		this.usersService.getAllUsers(this.page).then((data : any) => {
 			this.arrUsers = data.results;
 			console.log(this.arrUsers);
 			console.log(data);

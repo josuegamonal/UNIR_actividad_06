@@ -1,13 +1,3 @@
 <div class="container mt-3">
-	<div class="row justify-content-center">
-		@for (user of arrUsers; track user._id) {
-			<div class="col-sm-6 col-md-4 col-lg-3 col-12 mt-3 ">
-				<app-user-card [user]="user"></app-user-card>
-
-			</div>
-
-		}
-
-
-	</div>
+	<app-user-list></app-user-list>
 </div>

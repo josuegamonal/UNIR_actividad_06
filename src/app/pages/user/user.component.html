@@ -1,1 +1,12 @@
-<p>user works!</p>
+<div class="container">
+	<div>
+		<img [src]="singleUser.image" [alt]="singleUser.username">
+	</div>
+	<div>
+		<h2>{{ singleUser.first_name }}</h2>
+		<h2>{{ singleUser.last_name }}</h2>
+		<p>{{ singleUser.username }}</p>
+		<p>{{ singleUser.email }}</p>
+		<app-botones [parent]="'user'"></app-botones>
+			</div>
+	</div>

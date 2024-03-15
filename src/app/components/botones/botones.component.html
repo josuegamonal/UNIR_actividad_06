@@ -1,0 +1,13 @@
+<div class="d-flex gap-1">
+	@if(parent === 'root') {
+		<a class="btn btn-light btn-sm" [routerLink]="['/user', idUser]"> Ver detalle</a>
+		<a class="btn btn-light btn-sm" > Actualizar</a>
+		<a class="btn btn-light btn-sm" > Borrar</a>
+	}@else if (parent === 'user') {
+		<a class="btn btn-light btn-sm" > Eliminar</a>
+		<a class="btn btn-light btn-sm" > Actualizar</a>
+		<a class="btn btn-light btn-sm" [routerLink]="['/home']" > Volver al listado</a>
+
+	}
+
+</div>

@@ -12,7 +12,7 @@ export class UsersService {
 
 getAllUsers( page : number = 1) : Promise<IUsers>{
 
-		return lastValueFrom(this.httpClient.get<IUsers>(this.baseUrl + `?page=${page}`))
+		return lastValueFrom(this.httpClient.get<IUsers>(this.baseUrl + `?page=${page}&per_page=8`))
 
 	}
 

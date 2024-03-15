@@ -13,7 +13,7 @@ export class UsersService {
 
 getAllUsers( page : number) : Promise<IUsers>{
 
-		return lastValueFrom(this.httpClient.get<IUsers>(this.baseUrl + `?page=${page}&per_page=8`))
+		return lastValueFrom(this.httpClient.get<IUsers>(this.baseUrl + `?page=${page}&per_page=10`))
 
 	}
 
@@ -25,6 +25,7 @@ getAllUsers( page : number) : Promise<IUsers>{
 		return lastValueFrom(this.httpClient.get<IUser>(`https://peticiones.online/api/users/${id}`))
 
 	}
+
 
 
 }

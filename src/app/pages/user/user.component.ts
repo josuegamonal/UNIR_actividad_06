@@ -1,7 +1,6 @@
 import { Component, Input, inject } from '@angular/core';
 import { UsersService } from '../../services/users.service';
 import { IUser } from '../../interfaces/iuser.interface';
-import { UserCardBigComponent } from '../../components/user-card-big/user-card-big.component';
 import { BotonesComponent } from '../../components/botones/botones.component';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { IUsers } from '../../interfaces/iusers.interface';
@@ -9,7 +8,7 @@ import { IUsers } from '../../interfaces/iusers.interface';
 @Component({
   selector: 'app-user',
   standalone: true,
-  imports: [UserCardBigComponent, BotonesComponent, RouterLink],
+  imports: [BotonesComponent, RouterLink],
   templateUrl: './user.component.html',
   styleUrl: './user.component.css'
 })

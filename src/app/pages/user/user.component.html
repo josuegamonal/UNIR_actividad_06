@@ -1,1 +1,15 @@
-<p>user works!</p>
+<div class="container">
+	<div class="row align-items-center">
+		<div class=" col-sm border-right">
+			<img class="rounded-circle w-75" [src]="singleUser.image" [alt]="singleUser.first_name">
+		</div>
+		<div class=" col-sm align-middle">
+			<h2>{{ singleUser.first_name }}</h2>
+			<h2>{{ singleUser.last_name }}</h2>
+			<p><strong>Nombre Usuario: </strong>{{ singleUser.username }}</p>
+			<p><strong>Email: </strong>{{ singleUser.email }}</p>
+			<app-botones [parent]="'user'" [idUser]="singleUser._id"></app-botones>
+				</div>
+		</div>
+
+</div>

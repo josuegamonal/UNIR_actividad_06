@@ -1,0 +1,5 @@
+
+
+<div class="d-inline-flex p-2 flex-row" *ngFor="let page of [].constructor(totalPages); let i = index">
+	<a class="btn btn-light" [routerLink]="['/userlist', i + 1]">página {{ i + 1 }}</a>
+  </div>

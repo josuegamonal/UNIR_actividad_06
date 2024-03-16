@@ -35,4 +35,7 @@ updateUser(formValue : IUser): Promise <IUser>{
 	return lastValueFrom(this.httpClient.put<IUser>(this.baseUrl + `/${formValue._id}`, formValue))
 }
 
+deleteUser( id: string) : Promise <IUser>{
+
+	return lastValueFrom(this.httpClient.delete<IUser>(this.baseUrl + `/${id}`))}
 }

@@ -2,9 +2,9 @@
 	@if(parent === 'root') {
 		<a class="btn btn-light btn-sm" [routerLink]="['/user', idUser]"> Ver detalle</a>
 		<a class="btn btn-light btn-sm" [routerLink]="['/updateuser', idUser]"> Actualizar</a>
-		<a class="btn btn-light btn-sm" > Borrar</a>
+		<button class="btn btn-light btn-sm" (click)="deleteUser(idUser)" > Borrar</button>
 	}@else if (parent === 'user') {
-		<a class="btn btn-light btn-sm" > Eliminar</a>
+		<button class="btn btn-light btn-sm" (click)="deleteUser(idUser)"> Eliminar</button>
 		<a class="btn btn-light btn-sm" [routerLink]="['/updateuser', idUser]"> Actualizar</a>
 		<a class="btn btn-light btn-sm" [routerLink]="['/home']" > Volver al listado</a>
 

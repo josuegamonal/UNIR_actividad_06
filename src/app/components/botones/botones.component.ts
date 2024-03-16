@@ -22,7 +22,7 @@ export class BotonesComponent {
 			if(confirmar){
 				let response = await this.userSevice.deleteUser(id)
 				if (response._id){
-					alert("Usuario borrado")
+					alert("Usuari@ borrado")
 					this.router.navigate(['/home'])
 			}
 		}

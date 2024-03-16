@@ -15,6 +15,7 @@ import { IUsers } from '../../interfaces/iusers.interface';
 export class UserComponent {
 	activatedRoute = inject(ActivatedRoute)
 	usersService = inject(UsersService)
+
 	singleUser!: IUser
 
 	ngOnInit() : void {

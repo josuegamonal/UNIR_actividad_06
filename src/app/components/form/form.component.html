@@ -1,1 +1,55 @@
-<p>form works!</p>
+
+<section >
+	@if (userForm.value._id){
+		<h2>Actualizar Usuario</h2>
+	}@else { <h2>Nuevo Usuario</h2>
+	}
+
+	<form [formGroup]="userForm" (ngSubmit)="getDataForm()">
+		<div>
+			<label class="form-label mt-3" for="first_name">Nombre</label>
+			<input class="form-control" type="text" id="first_name" formControlName="first_name">
+
+			@if(checkControl('first_name', 'required') ){
+				<p class="error text-danger">Campo obligatorio</p>
+				}
+		</div>
+		<div>
+			<label class="form-label mt-3" for="last_name">Apellidos</label>
+			<input class="form-control" type="text" id="last_name" formControlName="last_name">
+
+			@if(checkControl('last_name', 'required') ){
+				<p class="error text-danger">Campo obligatorio</p>
+				}
+		</div>
+		<div>
+			<label class="form-label mt-3" for="email">Email</label>
+			<input class="form-control" type="text" id="email" formControlName="email">
+
+			@if(checkControl('email', 'required') ){
+				<p class="error text-danger">Campo obligatorio</p>
+				}
+
+			<!-- @if(checkControl('email', 'pattern')){
+				<p class="error text-danger">Campo no es de tipo email</p>
+				} -->
+
+		</div>
+		<div>
+			<label class="form-label mt-3" for="image">Imagen usuario</label>
+			<input class="form-control" type="text" id="image" formControlName="image">
+
+			@if(checkControl('image', 'required') ){
+				<p class="error text-danger">Campo obligatorio</p>
+				}
+		</div>
+		@if (userForm.value._id) {
+
+			<input class="btn btn-light mt-5" type="submit" value="Actualizar" [disabled]="!userForm.valid">
+
+
+		} @else {
+			<input class="btn btn-light mt-5" type="submit" value="Añadir" [disabled]="!userForm.valid">	}
+
+	</form>
+</section>

@@ -11,5 +11,6 @@ import { RouterLink } from '@angular/router';
 export class BotonesComponent {
 	@Input() parent: string = ""
 	@Input() idUser: string | undefined = ""
+	@Input() id: string | undefined = ""
 
 }

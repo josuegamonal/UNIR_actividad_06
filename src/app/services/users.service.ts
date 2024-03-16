@@ -17,15 +17,22 @@ getAllUsers( page : number) : Promise<IUsers>{
 
 	}
 
-	getUserById( id : string) : Promise<IUser>{
+getUserById( id : string) : Promise<IUser>{
 
-		console.log("id que pasa a servicio",id);
-
-
-		return lastValueFrom(this.httpClient.get<IUser>(`https://peticiones.online/api/users/${id}`))
-
-	}
+	console.log("id que pasa a servicio",id);
 
 
+	return lastValueFrom(this.httpClient.get<IUser>(`https://peticiones.online/api/users/${id}`))
+
+}
+
+insertUser(formValue : IUser): Promise <IUser>{
+
+	return lastValueFrom(this.httpClient.post<IUser>(this.baseUrl, formValue))
+}
+
+updateUser(formValue : IUser): Promise <IUser>{
+	return lastValueFrom(this.httpClient.put<IUser>(this.baseUrl + `/${formValue._id}`, formValue))
+}
 
 }

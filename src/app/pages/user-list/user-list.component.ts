@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
 import { UsersService } from '../../services/users.service';
 import { IUsers } from '../../interfaces/iusers.interface';
 import { IUser } from '../../interfaces/iuser.interface';
@@ -17,10 +17,10 @@ import { BotonesPaginasComponent } from '../../components/botones-paginas/botone
 export class UserListComponent {
 	usersService = inject(UsersService)
 	activatedRoute = inject(ActivatedRoute)
-
 	arrUsers : IUser[] = []
 	totalPages!: number;
 	page:number = 1;
+
 
 	async ngOnInit() {
 		try {

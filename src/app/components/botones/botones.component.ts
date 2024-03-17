@@ -16,6 +16,8 @@ export class BotonesComponent {
 	userSevice = inject(UsersService)
 	router = inject(Router)
 
+
+
 	async deleteUser(id : string | undefined){
 		if (id !== undefined){
 			let confirmar = confirm("¿Seguro que quieres borrar al usuri@ " + this.idUser + "?")
@@ -24,10 +26,16 @@ export class BotonesComponent {
 				if (response._id){
 					alert("Usuari@ borrado")
 					this.router.navigate(['/home'])
+					console.log("se ha borraod usuari@ " + response.first_name + " " + response.last_name);
+
 			}
 		}
 
+		}else{
+			alert("No se ha podido borrar el usuari@")
 		}
 	}
 
 }
+
+

@@ -26,15 +26,10 @@ export class UserListComponent {
 		try {
 		  this.activatedRoute.params.subscribe(async (params: any) => {
 			this.page = Number(params.page);
-			console.log("parametros en user list", this.page);
-			console.log(this.page, typeof this.page);
 
 			const data: IUsers = await this.usersService.getAllUsers(this.page);
 			this.arrUsers = data.results;
 			this.totalPages = data.total_pages;
-			console.log(this.arrUsers);
-			console.log(data);
-			console.log(this.totalPages);
 		  });
 		} catch (error) {
 		  console.error('Hubo un error al obtener los usuarios:', error);

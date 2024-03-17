@@ -39,7 +39,6 @@ ngOnInit() {
 console.log(params);
 if(params.id){
 	const response = await this.userServices.getUserById(params.id)
-	console.log("response para update",response);
 
 			this.userForm = new FormGroup({
 

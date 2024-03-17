@@ -22,12 +22,9 @@ export class UserComponent {
 
 		this.activatedRoute.params.subscribe(async (params: any) => {
 			const id : string = params.id
-			console.log("parametros", id);
 
 			try {
 			this.singleUser = await this.usersService.getUserById(id)
-			console.log(id);
-			console.log(this.singleUser);
 
 			} catch (error) {
 		console.error('Hubo un error al obtener el id:', error)}

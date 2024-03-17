@@ -15,14 +15,13 @@ export class BotonesPaginasComponent {
 	usersService = inject(UsersService)
 	users! : IUsers
 	totalPages!: number;
-	page:number = 1;
+	page! :number
 
 	async ngOnInit() {
 		try {
 			const data: IUsers = await this.usersService.getAllUsers(this.page);
 			this.users = data;
 			this.totalPages = data.total_pages;
-			console.log("datos en botonoes de página",this.users);
 		} catch (error) {
 			console.error('Hubo un error al obtener los usuarios:', error);
 		}
